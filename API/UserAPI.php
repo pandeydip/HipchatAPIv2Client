@@ -106,7 +106,7 @@ class UserAPI
     public function privateMessageUser($userId, $message)
     {
         if (is_string($message)) {
-            $content = array('message' => $message);
+            $content = array('message' => $message, 'notify'=>true);
         } else { // Assuming its a Message
             $content = $message->toJson();
         }
